@@ -1,0 +1,98 @@
+@import "./../../styles/partials/mixins.scss";
+@import "./../../styles/partials/typography.scss";
+@import "./../../styles/partials/variables.scss";
+
+.footer {
+  background-color: rgb(255, 255, 255, 0.4);
+
+  &__wrapper {
+    width: 100%;
+    padding: 1.5rem;
+
+    @include tablet {
+      padding: 2.25rem 3rem;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      padding: 2.25rem 8rem;
+      max-width: 80rem;
+    }
+  }
+
+  &__logo-title {
+    font-size: 1.25rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    &--right {
+      @include tablet {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0.5rem 0;
+    font-size: 0.9375rem;
+  }
+
+  &__logo {
+    padding: 1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    @include tablet {
+      padding: 1rem 0;
+      justify-content: flex-start;
+    }
+    &:hover {
+      background-color: rgb(255, 255, 255, 0);
+    }
+
+    &-icon {
+      width: 4rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    gap: 0.5rem;
+
+    @include tablet {
+      padding: 1rem 0;
+      padding-bottom: 1.25rem;
+      justify-content: flex-end;
+    }
+  }
+
+  &__github-icon {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+
+  &__github-link {
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    &:hover {
+      background-color: rgb(255, 255, 255, 0);
+    }
+  }
+}

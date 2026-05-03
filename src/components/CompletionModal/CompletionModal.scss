@@ -1,0 +1,51 @@
+@import "./../../styles/partials/mixins.scss";
+@import "./../../styles/partials/typography.scss";
+@import "./../../styles/partials/variables.scss";
+
+.modal {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  &__content {
+    background: white;
+    padding: 1.5rem;
+    text-align: center;
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      padding-top: 40vh;
+    }
+
+    @include tablet {
+      padding: 5rem 2.5rem 3rem;
+      margin: 0 2.5rem;
+      width: 70vw;
+      border-radius: 1.5625rem;
+      position: relative;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    background: none;
+    border: none;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

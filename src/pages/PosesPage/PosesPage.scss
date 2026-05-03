@@ -1,0 +1,28 @@
+@import "./../../styles/partials/mixins.scss";
+@import "./../../styles/partials/typography.scss";
+@import "./../../styles/partials/variables.scss";
+
+.poses {
+  margin: 1.5rem;
+  margin-bottom: 3rem;
+
+  @include tablet {
+    margin: 3rem 3rem;
+  }
+  @include desktop {
+    max-width: 80rem;
+    padding: 0 8rem;
+    margin: 3rem auto;
+  }
+
+  &__list {
+    @include tablet {
+      @include grid-layout(2, 3rem);
+    }
+
+    @include desktop {
+      @include grid-layout(3, 2rem);
+      margin: 3rem 0 8rem;
+    }
+  }
+}
